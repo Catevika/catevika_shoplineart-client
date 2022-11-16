@@ -1,0 +1,8 @@
+.footer__container {
+  position: fixed;
+  left: calc(141px);
+  bottom: 0;
+  height: 68px;
+  width: calc(100vw - 141px);
+  text-align: center;
+}
