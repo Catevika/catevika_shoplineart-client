@@ -25,3 +25,6 @@ dist-ssr
 
 # Edge hint
 .hintrc
+
+# ENV variables
+.env

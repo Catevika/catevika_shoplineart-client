@@ -1,20 +1,23 @@
 :root {
   --gold: hsl(45, 100%, 59%);
   --gold-70: hsla(45, 100%, 59%, 0.7);
-  --orange: hsl(32, 75%, 50%);
-  --orange-70: hsla(32, 75%, 50%, 0.7);
+  --gold-30: hsla(45, 100%, 59%, 0.3);
+  --orange: hsl(32, 75%, 36%);
+  --orange-70: hsla(32, 75%, 36%, 0.7);
   --ultra-dark: hsl(0, 0%, 10%);
   --dark: hsl(0, 0%, 14%);
+  --dark-50: hsla(0, 0%, 14%, 0.5);
   --white: hsla(0, 0%, 100%, 0.9);
   --gray: hsla(0, 0%, 100%, 0.7);
+  --gray-50: hsla(0, 0%, 100%, 0.35);
 
   font-family: 'Overpass', sans-serif;
   font-size: 16px;
   line-height: 1.5rem;
-  font-weight: 400;
+  font-weight: 300;
 
   color-scheme: light dark;
-  color: var(--white);
+  color: var(--gray);
   background-color: var(--dark);
 
   font-synthesis: none;
@@ -27,83 +30,13 @@
 *,
 ::before,
 ::after {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 body {
-  display: flex;
   min-width: 280px;
   min-height: 100vh;
   width: 100%;
-}
-
-a,
-Link,
-NavLink {
-  font-weight: 500;
-  color: var(--gray);
-  text-decoration: none;
-}
-
-a:hover,
-Link:hover,
-NavLink:hover {
-  color: var(--gold-70);
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-li {
-  list-style: none;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  color: var(--gold);
-  background-color: var(--dark);
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-
-button:hover {
-  color: var(--ultra-dark);
-  border-color: var(--gold-70);
-}
-
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: var(--dark);
-    background-color: var(--white);
-  }
-
-  a:hover,
-  Link:hover,
-  NavLink:hover {
-    color: var(--gold);
-  }
-
-  button {
-    background-color: var(--gold-70);
-    border: none;
-  }
-
-  button:hover {
-    color: var(--gold);
-    background-color: var(--white);
-    border: 1px solid var(--gold-70);
-  }
 }

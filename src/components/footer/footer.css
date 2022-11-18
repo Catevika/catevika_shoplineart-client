@@ -1,8 +1,17 @@
 .footer__container {
   position: fixed;
-  left: calc(141px);
   bottom: 0;
-  height: 68px;
-  width: calc(100vw - 141px);
+  font-size: 0.9rem;
   text-align: center;
+  width: 125px;
+  margin: 0 1rem;
+  padding: 10px 10px 20px;
+}
+
+@media screen and (max-width: 575px) {
+  .footer__container {
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+  }
 }
