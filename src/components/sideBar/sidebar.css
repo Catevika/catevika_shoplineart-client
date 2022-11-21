@@ -41,7 +41,7 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: flex-start;
-  height: 65vh;
+  height: calc(100vh - 280px);
   margin-left: 10px;
 }
 
@@ -93,6 +93,7 @@
     width: fit-content;
     background-color: var(--dark);
     z-index: 10;
+    margin: 0;
   }
 
   .sidebar__logo-img {
@@ -116,7 +117,7 @@
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
-    margin-top: calc(100vh - 210px);
+    margin-top: calc(100vh - 205px);
     margin-left: 0;
     padding: 10px 0 5px;
     border: 1px solid var(--gold);

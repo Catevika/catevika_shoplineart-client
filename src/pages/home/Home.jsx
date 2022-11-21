@@ -33,12 +33,12 @@ export default function Home() {
 						title='Search input'
 						name='search'
 						placeholder='Search... '
-						autoFocus={true}
+						autoFocus
 						value={text}
 						onChange={(e) => setText(e.target.value)}
 						className='search__input'
 					/>
-					<button title='Search button' type='submit'>
+					<button title='Search button' type='submit' className='search__btn'>
 						<BiSearchAlt className='search__icon' title='Search icon' />
 					</button>
 				</form>
