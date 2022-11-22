@@ -1,0 +1,11 @@
+.cart__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(100vw - 157px);
+  height: calc(100vh - 2rem);
+}
+
+.warning span {
+  color: var(--gold);
+}

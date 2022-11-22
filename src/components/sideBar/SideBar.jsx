@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import Logo from '../logo/Logo';
 import { RiHomeSmileFill } from 'react-icons/ri';
 import { FaCartArrowDown } from 'react-icons/fa';
 import { FcAbout } from 'react-icons/fc';
 import { MdContacts } from 'react-icons/md';
 import './sidebar.css';
-import logoUrl from '../../assets/logo.png';
 
 export default function SideBar() {
 	const [toggle, setToggle] = useState(true);
@@ -18,21 +18,12 @@ export default function SideBar() {
 				toggle ? 'sidebar__container' : 'sidebar__container no__border'
 			}
 		>
-			<figure className='sidebar__logo'>
-				<img
-					src={logoUrl}
-					alt=''
-					className='sidebar__logo-img'
-					onClick={handleMenu}
-				/>
-				<figcaption className='sidebar__logo-caption'>ShopLineArt</figcaption>
-			</figure>
-
+			<Logo handleMenu={handleMenu} />
 			<nav className='nav__container'>
 				<ul className='nav__items'>
 					<li>
 						<NavLink
-							to='/'
+							to='/home'
 							title='Home'
 							className={({ isActive }) =>
 								isActive ? 'nav__link active-link' : 'nav__link'
@@ -56,14 +47,14 @@ export default function SideBar() {
 					</li>
 					<li>
 						<NavLink
-							to='/shop'
-							title='Shop'
+							to='/cart'
+							title='Cart'
 							className={({ isActive }) =>
 								isActive ? 'nav__link active-link' : 'nav__link'
 							}
 						>
 							<FaCartArrowDown className='nav__icon' />
-							{toggle ? <span>Shop</span> : null}
+							{toggle ? <span>Cart</span> : null}
 						</NavLink>
 					</li>
 					<li>
