@@ -35,7 +35,7 @@ export default function Register() {
 		<div className='register__form-container'>
 			<h2 className='register__form-title'>
 				Register to try our <span>virtual shop</span> of the{' '}
-				<span>greatest posters </span>
+				<span>greatest wallpapers </span>
 				inline!
 			</h2>
 			<div className='register__form-wrapper'>

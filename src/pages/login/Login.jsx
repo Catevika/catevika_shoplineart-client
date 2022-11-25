@@ -1,7 +1,7 @@
 import { useContext, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { loginCall } from '../../api/apiCalls';
-import { AuthContext } from '../../context/AuthContext';
+import { AuthContext } from '../../context/authContext/AuthContext';
 import { CircularProgress } from '@mui/material';
 import './login.css';
 
@@ -22,7 +22,7 @@ export default function Login() {
 		<div className='login__form-container'>
 			<h2 className='login__form-title'>
 				Login to try our <span>virtual shop</span> of the{' '}
-				<span>greatest posters </span>
+				<span>greatest wallpapers </span>
 				inline!
 			</h2>
 			<div className='login__form-wrapper'>
