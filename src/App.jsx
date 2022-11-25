@@ -11,7 +11,7 @@ import ErrorPage from './pages/error/Error';
 import NoMatch from './pages/noMatch/NoMatch';
 import './app.css';
 
-import { AuthContext } from './context/AuthContext';
+import { AuthContext } from './context/authContext/AuthContext';
 
 function App() {
 	const { user } = useContext(AuthContext);

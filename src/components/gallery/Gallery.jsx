@@ -1,24 +1,21 @@
 import { useState, useEffect } from 'react';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { searchPhotos } from '../../photo-client/Client';
-import { FiMaximize } from 'react-icons/fi';
-import { MdClose } from 'react-icons/md';
+import Photo from '../../components/photo/Photo';
 import { GrCaretPrevious, GrCaretNext } from 'react-icons/gr';
 import './gallery.css';
 
-export default function Gallery({ term }) {
+export default function Gallery({ term })
+{
 	const [searching, setSearching] = useState(false);
 	const [error, setError] = useState(false);
+	const [nbPages, setNbPages] = useState(null);
 	const [pageNumber, setPageNumber] = useState(1);
 	const [gallery, setGallery] = useState([]);
-	const [nbPages, setNbPages] = useState(null);
 
-	const [isShowing, setIsShowing] = useState(false);
-
-	const toggle = () => setIsShowing(!isShowing);
-
-	useEffect(() => {
-		const getPhotos = async () => {
+	useEffect(() =>
+	{
+		const getPhotos = async () =>
+		{
 			try {
 				setSearching(true);
 				setError(false);
@@ -69,38 +66,11 @@ export default function Gallery({ term }) {
 
 			{!searching && !error && gallery?.length > 0 && (
 				<ul className='gallery-wrapper'>
-					{gallery.map((photo) => {
+					{gallery?.map((photo) =>
+					{
 						return (
 							<li key={photo.id} className='gallery__photo'>
-								<LazyLoadImage
-									src={isShowing ? photo.src.large : photo.src.medium}
-									alt={photo.alt}
-									loading='lazy'
-									className='gallery__photo-img'
-								/>
-								<div className='gallery__photo-overlay'>
-									<p className='gallery__photo-text'>
-										<a
-											href={photo.photographer_url}
-											className='gallery__photo-link'
-										>
-											{photo.photographer}
-										</a>
-										{isShowing ? (
-											<MdClose
-												title='View medium size'
-												className='gallery__photo-icon'
-												onClick={toggle}
-											/>
-										) : (
-											<FiMaximize
-												title='View large size'
-												className='gallery__photo-icon'
-												onClick={toggle}
-											/>
-										)}
-									</p>
-								</div>
+								<Photo photo={photo} />
 							</li>
 						);
 					})}
