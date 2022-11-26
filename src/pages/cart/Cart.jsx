@@ -17,9 +17,7 @@ export default function Cart()
 					<h3>
 						Hi <span>{user?.username}</span>, here{' '}
 						{cart.length
-							? cart.length === 1
-								? 'is the photo '
-								: 'are the photos ' + 'currently in your cart:'
+							? cart.length === 1 ? 'is the photo currently in your cart: ' : 'are the photos currently in your cart:'
 							: "let's put some photos in your cart!"}
 					</h3>
 					<Link to='/home'>
@@ -39,11 +37,13 @@ export default function Cart()
 									className='cart__item-img'
 								/>
 								<div className='cart__item-text'>
-									<p><span>Author:</span> {item.author}</p>
-									<p><span>Description:</span> {item.description}</p>
-									<p><span>Width:</span> {item.width} px</p>
-									<p><span>Height:</span> {item.height} px</p>
-									<p><span>Price:</span> Free with attribution to <a href={item.authorUrl}><span>{item.authorUrl}</span></a> OR donation to <span>{item.author}</span> via PayPal</p>
+									<div className='cart__item-text-out'>
+										<p><strong>Author:</strong> {item.author}</p>
+										<p><strong>Description:</strong> {item.description}</p>
+										<p><strong>Width:</strong> {item.width} px</p>
+										<p><strong>Height:</strong> {item.height} px</p>
+									</div>
+									<p><strong>Price:</strong> Free with <strong>attribution</strong> to <a href={item.authorUrl}><span>{item.authorUrl}</span></a> OR <strong>donation</strong> via <strong>PayPal</strong> if the author is affiliated</p>
 								</div>
 							</li>
 						);

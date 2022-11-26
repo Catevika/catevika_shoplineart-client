@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import { CartContext } from '../../context/cartContext/cartContext';
 import Logo from '../logo/Logo';
 import { RiHomeSmileFill } from 'react-icons/ri';
 import { FaCartArrowDown } from 'react-icons/fa';
@@ -7,11 +8,16 @@ import { FcAbout } from 'react-icons/fc';
 import { MdContacts } from 'react-icons/md';
 import './sidebar.css';
 
-export default function SideBar() {
+export default function SideBar()
+{
 	const [toggle, setToggle] = useState(true);
-	const handleMenu = () => {
+	const handleMenu = () =>
+	{
 		setToggle(!toggle);
 	};
+
+	const { cart, dispatch } = useContext(CartContext);
+
 	return (
 		<aside
 			className={
@@ -53,7 +59,8 @@ export default function SideBar() {
 								isActive ? 'nav__link active-link' : 'nav__link'
 							}
 						>
-							<FaCartArrowDown className='nav__icon' />
+							<FaCartArrowDown className='nav__icon cart' />
+							<p title='Cart content' className='nav__icon-notification'>{cart.length}</p>
 							{toggle ? <span>Cart</span> : null}
 						</NavLink>
 					</li>

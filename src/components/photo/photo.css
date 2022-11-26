@@ -1,7 +1,8 @@
-.photo__img {
+.photo__img-container {
   position: relative;
-  min-width: 235px;
-  max-width: calc(100vw - 157px);
+}
+
+.photo__img {
   width: calc(100% - 1rem);
   padding: 10px;
   border: 1px solid var(--white);
@@ -14,13 +15,13 @@
   left: 0;
   right: 0;
   opacity: 0;
-  width: calc(100% - 1rem);
+  width: 100%;
   height: calc(100% - 0.5rem);
   transition: .5s ease;
-  background-color: var(--dark-50);
+  background-color: var(--dark-70);
 }
 
-.gallery__photo:hover .photo__overlay {
+.photo__img-wrapper:hover .photo__overlay {
   opacity: 1;
 }
 
@@ -28,7 +29,6 @@
   position: absolute;
   bottom: 20.5px;
   left: 20px;
-  font-weight: 700;
   color: var(--white);
 }
 
@@ -38,33 +38,40 @@
 
 .photo__link p span {
   color: var(--gray);
-  font-weight: 300;
+  font-weight: 600;
 }
 
 .photo__link:hover {
   color: var(--gold);
 }
 
-.photo__icon {
-  position: absolute;
-  right: 20px;
-  top: 20px;
-  width: 32px;
-  height: 32px;
-}
-
 .cart__icon {
   position: absolute;
   z-index: 50;
-  bottom: 35.5px;
-  right: 45px;
+  bottom: 0;
+  right: 0;
   width: 2.5rem;
   height: 2.5rem;
+  margin: 20px 30px;
   color: var(--gold-70);
 }
 
+.cart__icon:hover {
+  color: var(--ultra-dark);
+  stroke: var(--gold);
+  stroke-width: 20px;
+}
+
 .cart__icon-disabled {
-  display: none;
+  position: absolute;
+  z-index: 50;
+  bottom: 0;
+  right: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin: 25px;
+  visibility: hidden;
+  cursor: none;
 }
 
 @media screen and (max-width: 575px) {

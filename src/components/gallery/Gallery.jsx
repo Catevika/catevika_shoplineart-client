@@ -28,15 +28,49 @@ export default function Gallery({ term })
 				setGallery(data.photos);
 				setSearching(false);
 			} catch (err) {
-				setError({ error: err.message });
+				setError(true);
 				console.log(error);
 			}
 		};
 		if (term) getPhotos();
 	}, [term, pageNumber]);
 
+	const sizes = [
+		{
+			id: 1,
+			label: 'Small',
+			value: 'small'
+		}, {
+			id: 2,
+			label: 'Medium',
+			value: 'medium'
+		}, {
+			id: 3,
+			label: 'Large',
+			value: 'large'
+		}, {
+			id: 4,
+			label: 'Large2x',
+			value: 'large2x'
+		}];
+
+	const [size, setSize] = useState('large');
+
+	const handleChange = (e) =>
+	{
+		setSize(e.target.value);
+	};
+
 	return (
 		<article className='gallery__container'>
+			<div className='gallery__size-selector'>
+				<label htmlFor="photo-size">Size: </label>
+				<select title='Select size of photos to display' value={size} onChange={handleChange} className='photo-size-select'>
+					{sizes.map((size) => (
+						<option key={size.id} value={size.value} className='photo-size-option'>{size.label}</option>
+					))}
+				</select>
+			</div>
 			{!searching && !error && gallery?.length > 0 && (
 				<div className='gallery__page'>
 					<div className='gallery__buttons'>
@@ -63,19 +97,21 @@ export default function Gallery({ term })
 					</p>
 				</div>
 			)}
+			{term !== 0 && nbPages === 0 ? <div className='error'>No matching result found. Try another term with a more detailed or a larger scope.</div> : null}
 
-			{!searching && !error && gallery?.length > 0 && (
-				<ul className='gallery-wrapper'>
-					{gallery?.map((photo) =>
-					{
-						return (
-							<li key={photo.id} className='gallery__photo'>
-								<Photo photo={photo} />
-							</li>
-						);
-					})}
-				</ul>
-			)}
-		</article>
+			{
+				!searching && !error && gallery?.length > 0 && (
+					<ul className='gallery-wrapper'>
+						{gallery?.map((photo) =>
+						{
+							return (
+								<li key={photo.id} className='gallery__photo'>
+									<Photo photo={photo} size={size} />
+								</li>
+							);
+						})}
+					</ul>
+				)}
+		</article >
 	);
 }
