@@ -40,6 +40,21 @@ li {
   list-style: none;
 }
 
+.error {
+  font-size: 1rem;
+  margin: 20px 0;
+  padding: 10px;
+  text-align: center;
+  color: var(--red);
+  background-color: var(--dark-70);
+  border: 1px solid var(--red);
+  border-radius: 10px;
+}
+
+.error .login__register-link {
+  color: var(--red);
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: var(--dark);

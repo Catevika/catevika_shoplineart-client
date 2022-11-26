@@ -62,12 +62,7 @@
 }
 
 .login__register-link {
-  color: var(--gold);
-}
-
-.error {
-  padding: 10px;
-  color: var(--red);
+  color: var(--white);
 }
 
 @media screen and (max-width: 575px) {

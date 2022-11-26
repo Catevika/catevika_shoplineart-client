@@ -13,7 +13,8 @@ import './app.css';
 
 import { AuthContext } from './context/authContext/AuthContext';
 
-function App() {
+function App()
+{
 	const { user } = useContext(AuthContext);
 
 	return (
@@ -22,18 +23,16 @@ function App() {
 				<Route path='/' element={<BasicLayout />} end>
 					<Route
 						path='/'
-						element={
-							user ? <Navigate to='/login' replace={true} /> : <Register />
-						}
+						element={<Register />}
 					/>
 					<Route
 						path='login'
 						element={user ? <Navigate to='/home' replace={true} /> : <Login />}
 					/>
 
-					<Route path='home' element={user ? <Home /> : <Register />} />
+					<Route path='home' element={user ? <Home /> : <Login />} />
 					<Route path='about' element={<About />} />
-					<Route path='cart' element={user ? <Cart /> : <Register />} />
+					<Route path='cart' element={user ? <Cart /> : <Login />} />
 					<Route path='contact' element={<Contact />} />
 					<Route path='error' element={<ErrorPage />} />
 				</Route>

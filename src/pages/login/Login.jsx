@@ -5,12 +5,14 @@ import { AuthContext } from '../../context/authContext/AuthContext';
 import { CircularProgress } from '@mui/material';
 import './login.css';
 
-export default function Login() {
+export default function Login()
+{
 	const email = useRef();
 	const password = useRef();
 	const { isFetching, error, dispatch } = useContext(AuthContext);
 
-	const handleSubmit = (e) => {
+	const handleSubmit = (e) =>
+	{
 		e.preventDefault();
 		loginCall(
 			{ email: email.current.value, password: password.current.value },
@@ -65,17 +67,17 @@ export default function Login() {
 						)}
 						{isFetching ? null : (
 							<>
-								<span>Not registered yet? </span>
+								<span>Not registered yet? Create a </span>
 								<span>
 									<Link to='/' className='login__register-link'>
-										Create a new account
+										new account
 									</Link>
 								</span>
 							</>
 						)}
 					</div>
 					{error ? (
-						<div className='error'>Invalid Email or Password. Please retry</div>
+						<div className='error'>No account found. Please <Link to='/' className='login__register-link'><span>register</span></Link> or <span><Link to='/login' className='login__register-link'>retry</Link></span></div>
 					) : null}
 				</form>
 			</div>
