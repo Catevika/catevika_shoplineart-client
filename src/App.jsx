@@ -6,12 +6,12 @@ import About from './pages/about/About';
 import Cart from './pages/cart/Cart';
 import Login from './pages/login/Login';
 import Register from './pages/register/Register';
+import { AuthContext } from './context/authContext/AuthContext';
 import Contact from './pages/contact/Contact';
 import ErrorPage from './pages/error/Error';
 import NoMatch from './pages/noMatch/NoMatch';
 import './app.css';
 
-import { AuthContext } from './context/authContext/AuthContext';
 
 function App()
 {
@@ -22,8 +22,8 @@ function App()
 			<Routes>
 				<Route path='/' element={<BasicLayout />} end>
 					<Route
-						path='/'
-						element={<Register />}
+						path='register'
+						element={user ? <Navigate to='/home' replace={true} /> : <Register />}
 					/>
 					<Route
 						path='login'
