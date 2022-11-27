@@ -63,13 +63,13 @@ export default function Login()
 						{isFetching ? (
 							<CircularProgress className='loading' color='inherit' />
 						) : (
-							<button className='login__btn'>Log In</button>
+							<button type='submit' className='login__btn'>Log In</button>
 						)}
 						{isFetching ? null : (
 							<>
 								<span>Not registered yet? Create a </span>
 								<span>
-									<Link to='/' className='login__register-link'>
+									<Link to='/register' className='login__register-link'>
 										new account
 									</Link>
 								</span>

@@ -27,7 +27,7 @@ export default function SideBar()
 			<Logo handleMenu={handleMenu} />
 			<nav className='nav__container'>
 				<ul className='nav__items'>
-					<li>
+					<li className='nav__item'>
 						<NavLink
 							to='/home'
 							title='Home'
@@ -39,7 +39,7 @@ export default function SideBar()
 							{toggle ? <span>Home</span> : null}
 						</NavLink>
 					</li>
-					<li>
+					<li className='nav__item'>
 						<NavLink
 							to='/about'
 							title='About'
@@ -51,7 +51,7 @@ export default function SideBar()
 							{toggle ? <span>About</span> : null}
 						</NavLink>
 					</li>
-					<li>
+					<li className='nav__item'>
 						<NavLink
 							to='/cart'
 							title='Cart'
@@ -64,7 +64,7 @@ export default function SideBar()
 							{toggle ? <span>Cart</span> : null}
 						</NavLink>
 					</li>
-					<li>
+					<li className='nav__item'>
 						<NavLink
 							to='/contact'
 							title='Contact'

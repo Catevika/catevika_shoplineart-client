@@ -5,14 +5,16 @@ import './register.css';
 
 axios.defaults.baseURL = import.meta.env.VITE_BASE_URL;
 
-export default function Register() {
+export default function Register()
+{
 	const username = useRef();
 	const email = useRef();
 	const password = useRef();
 	const passwordConfirmation = useRef();
 	const navigate = useNavigate();
 
-	const handleSubmit = async (e) => {
+	const handleSubmit = async (e) =>
+	{
 		e.preventDefault();
 		if (passwordConfirmation.current.value !== password.current.value) {
 			password.current.setCustomValidity('Passwords do not match!');
@@ -47,7 +49,7 @@ export default function Register() {
 						<input
 							name='username'
 							type='text'
-							autoComplete='current-username'
+							autoComplete='username'
 							autoFocus={true}
 							placeholder='Username'
 							className='register__form-input'
@@ -62,7 +64,7 @@ export default function Register() {
 						<input
 							name='email'
 							type='email'
-							autoComplete='current-email'
+							autoComplete='email'
 							placeholder='Email'
 							className='register__form-input'
 							ref={email}

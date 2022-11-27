@@ -21,7 +21,7 @@ export default function Cart()
 							: "let's put some photos in your cart!"}
 					</h3>
 					<Link to='/home'>
-						<button className='cart_welcome-btn-link'>
+						<button title='Home' className='cart_welcome-btn-link'>
 							Go to home
 						</button>
 					</Link>

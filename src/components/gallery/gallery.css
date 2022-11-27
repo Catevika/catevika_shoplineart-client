@@ -4,12 +4,11 @@
   flex-direction: column;
   align-items: center;
   margin-top: 120px;
-  z-index: 5;
 }
 
 .gallery__size-selector {
   position: fixed;
-  z-index: 150;
+  z-index: 100;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -29,7 +28,6 @@
 
 .gallery__page {
   position: fixed;
-  z-index: 100;
   background-color: var(--dark);
   display: flex;
   justify-content: center;
@@ -101,6 +99,7 @@
   .gallery__container {
     height: calc(100vh - 290px);
     margin-top: 90px;
+    z-index: 200;
   }
 
   .gallery__size-selector {
