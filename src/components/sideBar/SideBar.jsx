@@ -61,7 +61,7 @@ export default function SideBar()
 								}
 							>
 								<FaCartArrowDown className='nav__icon cart' />
-								<p title='Cart content' className='nav__icon-notification'><strong>{cart.length}</strong></p>
+								{cart.length > 0 ? <p title='Cart content' className='nav__icon-notification'><strong>{cart.length}</strong></p> : null}
 								{toggle ? <span>Cart</span> : null}
 							</NavLink>
 						</div>
