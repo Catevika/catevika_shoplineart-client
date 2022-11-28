@@ -26,7 +26,7 @@ export default function SideBar()
 		>
 			<Logo handleMenu={handleMenu} />
 			<nav className='nav__container'>
-				<ul className='nav__items'>
+				<ul className='nav__items-list'>
 					<li className='nav__item'>
 						<NavLink
 							to='/home'

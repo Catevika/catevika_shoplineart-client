@@ -38,18 +38,14 @@ export default function Gallery({ term })
 	const sizes = [
 		{
 			id: 1,
-			label: 'Small',
-			value: 'small'
-		}, {
-			id: 2,
 			label: 'Medium',
 			value: 'medium'
 		}, {
-			id: 3,
+			id: 2,
 			label: 'Large',
 			value: 'large'
 		}, {
-			id: 4,
+			id: 3,
 			label: 'Large2x',
 			value: 'large2x'
 		}];
