@@ -2,21 +2,19 @@ import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../context/authContext/AuthContext';
 import { CartContext } from '../../context/cartContext/cartContext';
+import { HiMinusCircle } from 'react-icons/hi';
 import './cart.css';
-
-// TODO: See Home css to apply to Cart regarding the Nav-items + Size of the Cart view
 
 export default function Cart()
 {
 	const { user } = useContext(AuthContext).user;
-	const { cart } = useContext(CartContext);
-
+	const { cart, dispatch } = useContext(CartContext);
 
 	return (
 		<div className='cart__container'>
 			<div className='cart__wrapper'>
 				<div className='cart_welcome-text'>
-					<p>
+					<p title='Welcome'>
 						Hi&nbsp;<span>{user?.username}!</span>
 						{cart.length
 							? "Let's check your cart:"
@@ -38,14 +36,21 @@ export default function Cart()
 									alt={item.description}
 									className='cart__item-img'
 								/>
+								<div className='cart__item-icon-container'>
+									<HiMinusCircle title='Remove from cart' className='cart__item-icon' onClick={() => dispatch({
+										type: 'REMOVE_FROM_CART',
+										id: item.id
+									})
+									} />
+								</div>
 								<div className='cart__item-text'>
 									<div className='cart__item-text-out'>
-										<p><strong>Author:</strong> {item.author}</p>
-										<p><strong>Description:</strong> {item.description}</p>
-										<p><strong>Width:</strong> {item.width} px - <strong>Height:</strong> {item.height} px</p>
+										<p title='Author'><strong>Author:</strong> {item.author}</p>
+										<p title='Description'><strong>Description:</strong> {item.description}</p>
+										<p title='Width'><strong>Width:</strong> {item.width} px - <strong>Height:</strong> {item.height} px</p>
 									</div>
-									<p><strong>License:</strong> Free with <strong>attribution</strong> to <a href={item.authorUrl}><span>{item.author}</span></a> </p>
-									<p>OR <strong>donation</strong> via <strong>PayPal</strong> if available</p>
+									<p title={item.authorUrl}><strong>License:</strong> Free with <strong>attribution</strong> to <a href={item.authorUrl}><span>{item.author}</span></a> </p>
+									<p title='Paypal Donation'>OR <strong>donation</strong> via <strong>PayPal</strong> if available</p>
 								</div>
 							</li>
 						);

@@ -5,7 +5,8 @@ export const initialState = {
 	error: false
 };
 
-const CartReducer = (state, action) => {
+const CartReducer = (state, action) =>
+{
 	console.log(action);
 	switch (action.type) {
 		case 'ADD_TO_CART':
@@ -34,7 +35,7 @@ const CartReducer = (state, action) => {
 				newCart.splice(index, 1);
 			} else {
 				console.warn(
-					`Cant remove product (id: ${action.id}) as its not in cart!`
+					`Cant remove photo (id: ${action.id}) as its not in cart!`
 				);
 			}
 

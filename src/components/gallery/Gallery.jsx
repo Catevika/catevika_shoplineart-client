@@ -93,7 +93,7 @@ export default function Gallery({ term })
 					</p>
 				</div>
 			)}
-			{term !== '' && nbPages === 0 ? <div className='error'>No matching result found. Try another term with a more detailed or a larger scope.</div> : null}
+			{term !== '' && nbPages === 0 ? <div className='error'>No matching result found.Try another term with a more detailed scope or a larger one.</div> : null}
 
 			{
 				!searching && !error && gallery?.length > 0 && (

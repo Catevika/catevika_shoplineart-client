@@ -52,17 +52,19 @@ export default function SideBar()
 						</NavLink>
 					</li>
 					<li className='nav__item'>
-						<NavLink
-							to='/cart'
-							title='Cart'
-							className={({ isActive }) =>
-								isActive ? 'nav__link active-link' : 'nav__link'
-							}
-						>
-							<FaCartArrowDown className='nav__icon cart' />
-							<p title='Cart content' className='nav__icon-notification'>{cart.length}</p>
-							{toggle ? <span>Cart</span> : null}
-						</NavLink>
+						<div className='nav__icon-notification-container'>
+							<NavLink
+								to='/cart'
+								title='Cart'
+								className={({ isActive }) =>
+									isActive ? 'nav__link active-link' : 'nav__link'
+								}
+							>
+								<FaCartArrowDown className='nav__icon cart' />
+								<p title='Cart content' className='nav__icon-notification'><strong>{cart.length}</strong></p>
+								{toggle ? <span>Cart</span> : null}
+							</NavLink>
+						</div>
 					</li>
 					<li className='nav__item'>
 						<NavLink
