@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from 'react';
+import { useContext } from 'react';
 import { CartContext } from '../../context/cartContext/cartContext';
 import { FaCartArrowDown } from 'react-icons/fa';
 import './photo.css';
@@ -27,16 +27,15 @@ export default function Photo({ photo, size })
 		<div className='photo__img-container'>
 			<div className='photo__img-wrapper'>
 				<img
-					src={size === 'small'
-						? photo.src.small
-						: size === 'medium '
-							? photo.src.medium
-							: size === 'large'
-								? photo.src.large : size === 'large2x'
-									? photo.src.large2x
-									: photo.src.medium}
+					src={size === 'medium '
+						? photo.src.medium
+						: size === 'large'
+							? photo.src.large
+							: size === 'large2x'
+								? photo.src.large2x
+								: photo.src.medium}
 					alt={photo.alt}
-					loading='lazy'
+					loading='auto'
 					className='photo__img'
 				/>
 				<div className='photo__overlay'>
