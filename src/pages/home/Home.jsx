@@ -5,11 +5,13 @@ import './home.css';
 
 export default function Home() {
 	const [text, setText] = useState('');
-	const [term, setTerm] = useState('');
+	const [term, setTerm] = useState(localStorage.getItem('term', text) || text);
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		setTerm(text);
+		JSON.parse(localStorage.setItem('term', text));
+
 	};
 
 	return (

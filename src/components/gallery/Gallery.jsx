@@ -4,18 +4,15 @@ import Photo from '../../components/photo/Photo';
 import { GrCaretPrevious, GrCaretNext } from 'react-icons/gr';
 import './gallery.css';
 
-export default function Gallery({ term })
-{
+export default function Gallery({ term }) {
 	const [searching, setSearching] = useState(false);
 	const [error, setError] = useState(false);
 	const [nbPages, setNbPages] = useState(null);
 	const [pageNumber, setPageNumber] = useState(1);
 	const [gallery, setGallery] = useState([]);
 
-	useEffect(() =>
-	{
-		const getPhotos = async () =>
-		{
+	useEffect(() => {
+		const getPhotos = async () => {
 			try {
 				setSearching(true);
 				setError(false);
@@ -52,8 +49,7 @@ export default function Gallery({ term })
 
 	const [size, setSize] = useState('large');
 
-	const handleChange = (e) =>
-	{
+	const handleChange = (e) => {
 		setSize(e.target.value);
 	};
 
@@ -98,8 +94,7 @@ export default function Gallery({ term })
 			{
 				!searching && !error && gallery?.length > 0 && (
 					<ul className='gallery-wrapper'>
-						{gallery?.map((photo) =>
-						{
+						{gallery?.map((photo) => {
 							return (
 								<li key={photo.id} className='gallery__photo'>
 									<Photo photo={photo} size={size} />
