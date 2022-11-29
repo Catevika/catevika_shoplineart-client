@@ -2,7 +2,7 @@ import { createContext, useEffect, useReducer } from 'react';
 import CartReducer from './cartReducer';
 
 const INITIAL_STATE = {
-	cart: [],
+	cart: JSON.parse(localStorage.getItem('cart')) || [],
 	user: JSON.parse(localStorage.getItem('user')) || null,
 	isFetching: false,
 	error: false
