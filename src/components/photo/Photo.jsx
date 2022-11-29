@@ -7,6 +7,8 @@ export default function Photo({ photo, size })
 {
 	const { cart, dispatch } = useContext(CartContext);
 
+	const overlayColor = photo.avg_color ? photo.avg_color : '#242424b3';
+
 	const addToCart = () =>
 	{
 		dispatch({
@@ -16,6 +18,7 @@ export default function Photo({ photo, size })
 				author: photo.photographer,
 				authorUrl: photo.photographer_url,
 				description: photo.alt,
+				avgColor: photo.avg_color,
 				image: photo.src.original,
 				width: photo.width,
 				height: photo.height
@@ -38,7 +41,7 @@ export default function Photo({ photo, size })
 					loading='auto'
 					className='photo__img'
 				/>
-				<div className='photo__overlay'>
+				<div className='photo__overlay' style={{ 'backgroundColor': overlayColor, 'width': 'calc(100% - 1rem)', 'height': 'calc(100% - 0.5rem)', 'opacity': 0.7 }}>
 					<div className='photo__text'>
 						<a href={photo.photographer_url} className='photo__link'>
 							<p>

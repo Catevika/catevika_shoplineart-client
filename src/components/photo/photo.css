@@ -18,7 +18,6 @@
   width: 100%;
   height: calc(100% - 0.5rem);
   transition: .5s ease;
-  background-color: var(--dark-70);
 }
 
 .photo__img-wrapper:hover .photo__overlay {
