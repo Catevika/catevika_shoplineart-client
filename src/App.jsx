@@ -13,8 +13,7 @@ import NoMatch from './pages/noMatch/NoMatch';
 import './app.css';
 
 
-function App()
-{
+function App() {
 	const { user } = useContext(AuthContext);
 
 	return (
@@ -29,8 +28,7 @@ function App()
 						path='login'
 						element={user ? <Navigate to='/home' replace={true} /> : <Login />}
 					/>
-
-					<Route path='home' element={user ? <Home /> : <Login />} />
+					<Route path='home' element={<Home />} />
 					<Route path='about' element={<About />} />
 					<Route path='cart' element={user ? <Cart /> : <Login />} />
 					<Route path='contact' element={<Contact />} />
