@@ -56,7 +56,7 @@ export default function Gallery({ term }) {
 	return (
 		<article className='gallery__container'>
 			<div className='gallery__size-selector'>
-				<label htmlFor="photo-size">Size: </label>
+				<label htmlFor="photo-size" className='photo-size-label'>Size: </label>
 				<select title='Select size of photos to display' value={size} onChange={handleChange} className='photo-size-select'>
 					{sizes.map((size) => (
 						<option key={size.id} value={size.value} className='photo-size-option'>{size.label}</option>
@@ -68,6 +68,7 @@ export default function Gallery({ term }) {
 					<div className='gallery__buttons'>
 						<button
 							type='button'
+							title='Previous page'
 							className='gallery__button'
 							onClick={() => setPageNumber((pageNumber) => pageNumber - 1)}
 							disabled={pageNumber === 1}
@@ -76,6 +77,7 @@ export default function Gallery({ term }) {
 						</button>
 						<button
 							type='button'
+							title='Next page'
 							className='gallery__button'
 							onClick={() => setPageNumber((pageNumber) => pageNumber + 1)}
 							disabled={pageNumber === nbPages}
@@ -83,13 +85,13 @@ export default function Gallery({ term }) {
 							<GrCaretNext className='gallery__icon' />{' '}
 						</button>
 					</div>
-					<p className='gallery__page-text'>
+					<p tile='Current page / Total page' className='gallery__page-text'>
 						{' '}
 						page: <span>{pageNumber}</span> / {nbPages}
 					</p>
 				</div>
 			)}
-			{term !== '' && nbPages === 0 ? <div className='error'>No matching result found.Try another term with a more detailed scope or a larger one.</div> : null}
+			{term !== '' && nbPages === 0 ? <div className='error'>No matching result found. Try another term with a more detailed scope or a larger one.</div> : null}
 
 			{
 				!searching && !error && gallery?.length > 0 && (
