@@ -5,13 +5,12 @@ import './home.css';
 
 export default function Home() {
 	const [text, setText] = useState('');
-	const [term, setTerm] = useState(localStorage.getItem('term', text) || text);
+	const [term, setTerm] = useState(JSON.parse((localStorage.getItem('term', text))) || text);
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		setTerm(text);
-		JSON.parse(localStorage.setItem('term', text));
-
+		localStorage.setItem('term', JSON.stringify(text));
 	};
 
 	return (
