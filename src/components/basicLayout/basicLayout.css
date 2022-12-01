@@ -31,19 +31,20 @@
   line-height: 5rem;
 }
 
-.welcome__text-link {
+.welcome__link {
   font-weight: 600;
   color: var(--gold);
 }
 
 .welcome__btn {
   margin-top: 20px;
+  z-index: 250;
 }
 
 @media screen and (max-width: 575px) {
   .welcome__container {
-    width: calc(100% - 2rem);
-    margin-left: 0;
+    width: auto;
+    margin: 0;
   }
 
   .welcome__container p {
