@@ -65,8 +65,9 @@
 
 .nav__icon-notification {
   position: absolute;
-  right: 40px;
-  top: -20px;
+  right: 0;
+  top: 0;
+  margin: -20px 40px 0 0;
   padding: 2px 6px 1px;
   font-weight: 500;
   color: var(--gold-70);
@@ -83,7 +84,7 @@
   }
 
   .nav__container {
-    width: calc(100vw - 3rem);
+    width: calc(100vw - 2rem);
     overflow-x: unset;
   }
 
@@ -110,8 +111,7 @@
   }
 
   .nav__icon-notification {
-    right: -20px;
-    top: -5px;
+    margin: -5px -20px 0 0;
   }
 
   .nav__link {
