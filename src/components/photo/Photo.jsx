@@ -3,14 +3,12 @@ import { CartContext } from '../../context/cartContext/cartContext';
 import { FaCartArrowDown } from 'react-icons/fa';
 import './photo.css';
 
-export default function Photo({ photo, size })
-{
+export default function Photo({ photo, size }) {
 	const { cart, dispatch } = useContext(CartContext);
 
 	const overlayColor = photo.avg_color ? photo.avg_color : '#242424b3';
 
-	const addToCart = () =>
-	{
+	const addToCart = () => {
 		dispatch({
 			type: 'ADD_TO_CART',
 			item: {
@@ -30,7 +28,7 @@ export default function Photo({ photo, size })
 		<div className='photo__img-container'>
 			<div className='photo__img-wrapper'>
 				<img
-					src={size === 'medium '
+					src={size === 'medium'
 						? photo.src.medium
 						: size === 'large'
 							? photo.src.large
@@ -41,19 +39,21 @@ export default function Photo({ photo, size })
 					loading='auto'
 					className='photo__img'
 				/>
-				<div className='photo__overlay' style={{ 'backgroundColor': overlayColor, 'width': 'calc(100% - 1rem)', 'height': 'calc(100% - 0.5rem)', 'opacity': 0.7 }}>
+				<div className='photo__overlay' style={{ 'background': overlayColor }}>
 					<div className='photo__text'>
-						<a href={photo.photographer_url} className='photo__link'>
+						<div className='photo__text-wrapper'>
+							<a href={photo.photographer_url} className='photo__link'>
+								<p>
+									<strong>Author:</strong> <span>{photo.photographer}</span>
+								</p>
+							</a>
 							<p>
-								<strong>Author:</strong> <span>{photo.photographer}</span>
+								<strong>Width:</strong> <span>{photo.width}px</span>
 							</p>
-						</a>
-						<p>
-							<strong>Width:</strong> <span>{photo.width} px</span>
-						</p>
-						<p>
-							<strong>Height:</strong> <span>{photo.height} px</span>
-						</p>
+							<p>
+								<strong>Height:</strong> <span>{photo.height}px</span>
+							</p>
+						</div>
 					</div>
 				</div>
 			</div>

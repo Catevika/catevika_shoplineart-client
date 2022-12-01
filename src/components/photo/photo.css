@@ -10,34 +10,49 @@
 
 .photo__overlay {
   position: absolute;
+  z-index: 1;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  opacity: 0;
-  width: 100%;
+  width: calc(100% - 1rem);
   height: calc(100% - 0.5rem);
+  opacity: 0;
   transition: .5s ease;
 }
 
 .photo__img-wrapper:hover .photo__overlay {
-  opacity: 1;
+  opacity: 0.75;
+}
+
+.photo__text-wrapper {
+  width: 100%;
+  height: 100%;
+  padding: 5px 7px;
+  border-radius: 10px;
+  background-color: var(--dark-50);
 }
 
 .photo__text {
   position: absolute;
+  z-index: 2;
   bottom: 20.5px;
   left: 20px;
+  font-weight: 800;
   color: var(--white);
+  opacity: 1
 }
 
 .photo__link {
   color: var(--white);
+  opacity: 1;
 }
 
+.photo__text p span,
 .photo__link p span {
-  color: var(--gray);
-  font-weight: 600;
+  color: var(--white);
+  font-weight: 400;
+  opacity: 1;
 }
 
 .photo__link:hover {
@@ -78,7 +93,7 @@
     width: calc(100% - 10px)
   }
 
-  .photo__icon {
-    display: none;
+  .photo__overlay {
+    width: calc(100% - 0.5rem);
   }
 }
