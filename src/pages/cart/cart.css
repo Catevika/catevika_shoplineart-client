@@ -10,7 +10,7 @@
 
 .cart_welcome-text {
   position: fixed;
-  z-index: 5;
+  z-index: 69;
   top: 0px;
   min-width: 215px;
   width: 100%;
@@ -151,6 +151,10 @@
   .cart_welcome-btn-link {
     display: none;
   }
+
+  .cart__zip-btn {
+    position: relative;
+  }
 }
 
 @media screen and (max-width: 345px) {
@@ -162,5 +166,3 @@
     height: calc(100vh - 260px);
   }
 }
-
-@media screen and (min-width: 850px) {}
