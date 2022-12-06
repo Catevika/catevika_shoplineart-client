@@ -1,8 +1,19 @@
 {
   "name": "catevika_shoplineart",
-  "private": true,
-  "version": "0.0.0",
+  "private": false,
+  "version": "1.0.0",
   "type": "module",
+  "keywords": [
+    "vite",
+    "react",
+    "emailjs",
+    "jszip",
+    "responsive",
+    "learning",
+    "photo",
+    "gallery",
+    "pexels"
+  ],
   "scripts": {
     "dev": "vite --host",
     "build": "vite build",
