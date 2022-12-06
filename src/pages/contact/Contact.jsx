@@ -1,7 +1,10 @@
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
-
 import './contact.css';
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 export default function Contact() {
 	const form = useRef();
@@ -12,14 +15,27 @@ export default function Contact() {
 		emailjs.sendForm(import.meta.env.VITE_EMAILJS_SERVICE_ID, import.meta.env.VITE_EMAILJS_TEMPLATE_ID, form.current, import.meta.env.VITE_EMAILJS_PUBLIC_KEY)
 			.then((result) => {
 				console.log(result.text);
+				toast.success('Email sent successfully', {
+					theme: "dark"
+				}, {
+					position: toast.POSITION.BOTTOM_CENTER
+				});
 			}, (error) => {
 				console.log(error.text);
+				toast.error('Email sending failed', {
+					theme: "dark"
+				}, {
+					position: toast.POSITION.BOTTOM_CENTER
+				});
 			});
+
+		form.current.reset();
 	};
 
 	return (
 		<div className='form__container'>
 			<form ref={form} className='form__wrapper' onSubmit={sendEmail}>
+				<p title='Contact us' className='form__text'>Contact us:</p>
 				<div className='form__group'>
 					<label title='Full name' htmlFor='username'>
 						Full name
@@ -81,6 +97,7 @@ export default function Contact() {
 				<button title='Send' type='submit' className='form__btn'>
 					Send
 				</button>
+				<ToastContainer />
 			</form>
 		</div>
 	);

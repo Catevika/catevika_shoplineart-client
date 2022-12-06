@@ -14,6 +14,13 @@
   height: 100%;
 }
 
+.form__text {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
 .form__group {
   z-index: 10;
   display: flex;
@@ -33,7 +40,7 @@
 }
 
 .form__input.textarea {
-  height: 10rem;
+  height: 8rem;
 }
 
 .form__input:hover {
@@ -47,5 +54,14 @@
 @media screen and (max-width: 575px) {
   .form__container {
     margin-left: 0;
+  }
+
+  .form__text {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  .form__group {
+    margin-bottom: 10px;
   }
 }
