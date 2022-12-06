@@ -5,16 +5,14 @@ import './register.css';
 
 axios.defaults.baseURL = import.meta.env.VITE_BASE_URL;
 
-export default function Register()
-{
+export default function Register() {
 	const username = useRef();
 	const email = useRef();
 	const password = useRef();
 	const passwordConfirmation = useRef();
 	const navigate = useNavigate();
 
-	const handleSubmit = async (e) =>
-	{
+	const handleSubmit = async (e) => {
 		e.preventDefault();
 		if (passwordConfirmation.current.value !== password.current.value) {
 			password.current.setCustomValidity('Passwords do not match!');
@@ -36,9 +34,7 @@ export default function Register()
 	return (
 		<div className='register__form-container'>
 			<h2 className='register__form-title'>
-				Register to try our <span>virtual shop</span> of the{' '}
-				<span>greatest wallpapers </span>
-				inline!
+				Register to download some of the best photos from <span>PEXELS</span> artists!
 			</h2>
 			<div className='register__form-wrapper'>
 				<form className='register__form' onSubmit={handleSubmit}>

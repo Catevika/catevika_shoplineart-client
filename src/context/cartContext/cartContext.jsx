@@ -3,7 +3,6 @@ import CartReducer from './cartReducer';
 
 const INITIAL_STATE = {
 	cart: JSON.parse(localStorage.getItem('cart')) || [],
-	user: JSON.parse(localStorage.getItem('user')) || null,
 	isFetching: false,
 	error: false
 };
@@ -21,7 +20,6 @@ export const CartContextProvider = ({ children }) => {
 		<CartContext.Provider
 			value={{
 				cart: [...state.cart],
-				user: state.user,
 				isFetching: state.isFetching,
 				error: state.error,
 				dispatch

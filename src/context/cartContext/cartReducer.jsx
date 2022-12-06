@@ -5,8 +5,7 @@ export const initialState = {
 	error: false
 };
 
-const CartReducer = (state, action) =>
-{
+const CartReducer = (state, action) => {
 	console.log(action);
 	switch (action.type) {
 		case 'ADD_TO_CART':
@@ -17,7 +16,7 @@ const CartReducer = (state, action) =>
 				error: false
 			};
 
-		case 'EMPTY_CART':
+		case 'RESET_CART':
 			return {
 				...state,
 				cart: [],
@@ -38,7 +37,6 @@ const CartReducer = (state, action) =>
 					`Cant remove photo (id: ${action.id}) as its not in cart!`
 				);
 			}
-
 			return {
 				...state,
 				cart: newCart,

@@ -5,14 +5,12 @@ import { AuthContext } from '../../context/authContext/AuthContext';
 import { CircularProgress } from '@mui/material';
 import './login.css';
 
-export default function Login()
-{
+export default function Login() {
 	const email = useRef();
 	const password = useRef();
 	const { isFetching, error, dispatch } = useContext(AuthContext);
 
-	const handleSubmit = (e) =>
-	{
+	const handleSubmit = (e) => {
 		e.preventDefault();
 		loginCall(
 			{ email: email.current.value, password: password.current.value },
@@ -23,9 +21,7 @@ export default function Login()
 	return (
 		<div className='login__form-container'>
 			<h2 className='login__form-title'>
-				Login to try our <span>virtual shop</span> of the{' '}
-				<span>greatest wallpapers </span>
-				inline!
+				Login to download some of the best photos from <span>PEXELS</span> artists!
 			</h2>
 			<div className='login__form-wrapper'>
 				<form className='login__form' onSubmit={handleSubmit}>
