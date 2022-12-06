@@ -8,15 +8,14 @@ import { FcAbout } from 'react-icons/fc';
 import { MdContacts } from 'react-icons/md';
 import './sidebar.css';
 
-export default function SideBar()
-{
+export default function SideBar() {
 	const [toggle, setToggle] = useState(true);
-	const handleMenu = () =>
-	{
+
+	const handleMenu = () => {
 		setToggle(!toggle);
 	};
 
-	const { cart, dispatch } = useContext(CartContext);
+	const { cart } = useContext(CartContext);
 
 	return (
 		<aside

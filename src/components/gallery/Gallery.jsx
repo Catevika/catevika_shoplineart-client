@@ -22,7 +22,7 @@ export default function Gallery({ term }) {
 					per_page: 15
 				});
 				setNbPages(Math.ceil(data.total_results / data.per_page));
-				setGallery(data.photos);
+				setGallery(data?.photos);
 				setSearching(false);
 			} catch (err) {
 				setError(true);

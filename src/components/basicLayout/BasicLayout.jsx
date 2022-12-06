@@ -11,7 +11,7 @@ export default function BasicLayout() {
 			<SideBar />
 			<main>
 				<Outlet />
-				{location.pathname === '/' ? <div className='welcome__container'>
+				{location?.pathname === '/' ? <div className='welcome__container'>
 					<p title='Welcome'>
 						Welcome to
 					</p>
