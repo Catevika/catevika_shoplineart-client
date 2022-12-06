@@ -1,9 +1,17 @@
+.logo__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .logo {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  margin-bottom: 10px;
 }
 
 .logo-img {
@@ -22,6 +30,7 @@
 
 @media screen and (max-width: 575px) {
   .logo__container {
+    flex-direction: row;
     width: calc(100vw - 2rem);
     height: 75px;
     margin-top: -1rem;
@@ -42,5 +51,9 @@
 
   .logo-caption {
     font-size: 1.5rem;
+  }
+
+  .logo__btn-logout {
+    margin-left: 10px;
   }
 }
