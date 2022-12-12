@@ -5,7 +5,7 @@
 .photo__img {
   width: calc(100% - 1rem);
   padding: 10px;
-  border: 1px solid var(--white);
+  border: 1px solid var(--night, var(--gray)) var(--day, var(--dark));
 }
 
 .photo__overlay {
@@ -56,7 +56,7 @@
 }
 
 .photo__link:hover {
-  color: var(--gold);
+  color: var(--night, var(--gold)) var(--day, var(--orange));
 }
 
 .cart__icon {
@@ -67,12 +67,12 @@
   width: 2.5rem;
   height: 2.5rem;
   margin: 20px 30px;
-  color: var(--gold-70);
+  color: var(--night, var(--gold-70)) var(--day, var(--orange-70))
 }
 
 .cart__icon:hover {
-  color: var(--ultra-dark);
-  stroke: var(--gold);
+  color: var(--night, var(--dark)) var(--day, var(--gray));
+  stroke: var(--night, var(--gold)) var(--day, var(--orange));
   stroke-width: 20px;
 }
 

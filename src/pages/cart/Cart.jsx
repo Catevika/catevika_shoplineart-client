@@ -64,11 +64,9 @@ export default function Cart() {
 									} />
 								</div>
 								<div className='cart__item-text'>
-									<div className='cart__item-text-out'>
-										<p title='Author'><strong>Author:</strong> {item.author}</p>
-										<p title='Description'><strong>Description:</strong> {item.description}</p>
-										<p title='Width'><strong>Width:</strong> {item.width} px - <strong>Height:</strong> {item.height} px</p>
-									</div>
+									<p title='Author'><strong>Author:</strong> {item.author}</p>
+									<p title='Description' className='cart__item-text-description'><strong>Description:</strong> {item.description}</p>
+									<p title='Width'><strong>Width:</strong> {item.width} px - <strong>Height:</strong> {item.height} px</p>
 								</div>
 							</div>
 						);

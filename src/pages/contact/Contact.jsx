@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import imgUrl from '../../assets/logo.png';
 import './contact.css';
 
 import { ToastContainer, toast } from 'react-toastify';
@@ -99,6 +100,7 @@ export default function Contact() {
 				</button>
 				<ToastContainer />
 			</form>
+			<img src={imgUrl} alt="" className='form__container-image' />
 		</div>
 	);
 }

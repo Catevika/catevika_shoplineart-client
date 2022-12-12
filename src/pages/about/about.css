@@ -1,13 +1,13 @@
 .about__container {
   display: flex;
   align-items: center;
+  justify-content: center;
   height: 100vh;
   margin-left: 157px;
-  padding-right: 1rem;
 }
 
 .about__container span {
-  color: var(--gold-70);
+  color: var(--night, var(--gold-70)) var(--day, var(--orange-70));
   font-size: 1rem;
   font-weight: 700;
 }
@@ -16,8 +16,8 @@
   position: absolute;
   bottom: 1rem;
   right: 1rem;
-  width: 210px;
-  height: 210px;
+  width: 160px;
+  height: 160px;
   -webkit-filter: hue-rotate(330deg);
   filter: hue-rotate(330deg);
 }
@@ -31,6 +31,7 @@
   height: 100%;
   margin-left: 1rem;
   margin-bottom: 20px;
+  padding-right: 1rem;
 }
 
 .about__title span {
@@ -68,20 +69,12 @@
   width: 2rem;
   margin-top: -15px;
   margin-left: 10px;
-  fill: var(--gold-70);
-  stroke: var(--ultra-dark);
-  background-color: var(--dark);
+  fill: var(--night, var(--gold-70)) var(--day, var(--orange-70));
+  stroke: var(--night, var(--dark)) var(--day, var(--gray));
+  background-color: var(--night, var(--dark)) var(--day, var(--gray));
 }
 
-@media screen and (max-width: 800px) {
-  .about__container {
-    font-size: 1rem;
-  }
-
-  .about__wrapper {
-    margin-bottom: 10px;
-  }
-
+@media screen and (max-width: 600px) {
   .about__container-image {
     display: none;
   }
@@ -94,9 +87,7 @@
 
   .about__wrapper {
     justify-content: flex-start;
-    margin-top: 180px;
-    height: calc(100vh - 220px);
-    margin-bottom: 220px;
+    height: calc(100vh - 290px);
     overflow-y: scroll;
   }
 

@@ -13,11 +13,10 @@
     width: 100%;
     margin: 0;
     padding: 10px;
-    z-index: -1;
+    background-color: var(--night, var(--dark)) var(--day, var(--gray));
   }
 
   .footer__container p {
-    border-color: var(--dark);
     z-index: 5;
   }
 }

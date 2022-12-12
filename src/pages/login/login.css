@@ -5,7 +5,7 @@
   justify-content: center;
   margin-left: 157px;
   padding: 1rem;
-  height: calc(100vh - 2rem);
+  height: 100vh;
 }
 
 .login__form-title {
@@ -13,7 +13,7 @@
 }
 
 .login__form-title span {
-  color: var(--gold);
+  color: var(--night, var(--gold)) var(--day, var(--orange));
 }
 
 .login__form-wrapper {
@@ -49,10 +49,6 @@
   margin-right: 10px;
 }
 
-.login__form-input:focus {
-  outline: 1px solid var(--gold-70);
-}
-
 .login__btn {
   font-weight: 500;
   margin-right: 10px;
@@ -63,7 +59,8 @@
 }
 
 .login__register-link {
-  color: var(--white);
+  font-weight: 600;
+  color: var(--night, var(--gold)) var(--day, var(--orange));
 }
 
 @media screen and (max-width: 575px) {

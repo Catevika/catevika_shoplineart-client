@@ -1,29 +1,21 @@
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
 import { CartContext } from '../../context/cartContext/cartContext';
 import Logo from '../logo/Logo';
-import { RiHomeSmileFill } from 'react-icons/ri';
 import { FaCartArrowDown } from 'react-icons/fa';
 import { FcAbout } from 'react-icons/fc';
 import { MdContacts } from 'react-icons/md';
+import { RiHomeSmileFill } from 'react-icons/ri';
 import './sidebar.css';
 
 export default function SideBar() {
-	const [toggle, setToggle] = useState(true);
-
-	const handleMenu = () => {
-		setToggle(!toggle);
-	};
-
 	const { cart } = useContext(CartContext);
 
 	return (
 		<aside
-			className={
-				toggle ? 'sidebar__container' : 'sidebar__container no__border'
-			}
+			className='sidebar__container'
 		>
-			<Logo handleMenu={handleMenu} />
+			<Logo />
 			<nav className='nav__container'>
 				<ul className='nav__items-list'>
 					<li className='nav__item'>
@@ -35,7 +27,7 @@ export default function SideBar() {
 							}
 						>
 							<RiHomeSmileFill className='nav__icon' />
-							{toggle ? <span>Home</span> : null}
+							<span>Home</span>
 						</NavLink>
 					</li>
 					<li className='nav__item'>
@@ -47,7 +39,7 @@ export default function SideBar() {
 							}
 						>
 							<FcAbout className='nav__icon nav__icon-white' />
-							{toggle ? <span>About</span> : null}
+							<span>About</span>
 						</NavLink>
 					</li>
 					<li className='nav__item'>
@@ -61,7 +53,7 @@ export default function SideBar() {
 							>
 								<FaCartArrowDown className='nav__icon cart' />
 								{cart.length > 0 ? <p title='Cart content' className='nav__icon-notification'><strong>{cart.length}</strong></p> : null}
-								{toggle ? <span>Cart</span> : null}
+								<span>Cart</span>
 							</NavLink>
 						</div>
 					</li>
@@ -74,7 +66,7 @@ export default function SideBar() {
 							}
 						>
 							<MdContacts className='nav__icon' />
-							{toggle ? <span>Contact</span> : null}
+							<span>Contact</span>
 						</NavLink>
 					</li>
 				</ul>

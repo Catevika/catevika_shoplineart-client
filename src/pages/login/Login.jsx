@@ -63,7 +63,7 @@ export default function Login() {
 						)}
 						{isFetching ? null : (
 							<>
-								<span>Not registered yet? Create a </span>
+								<span>Not registered yet? Create&nbsp;a&nbsp;</span>
 								<span>
 									<Link to='/register' className='login__register-link'>
 										new account

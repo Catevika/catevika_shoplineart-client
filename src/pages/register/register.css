@@ -5,7 +5,7 @@
   justify-content: center;
   margin-left: 157px;
   padding: 1rem;
-  height: calc(100vh - 2rem);
+  height: 100vh;
 }
 
 .register__form-title {
@@ -13,7 +13,7 @@
 }
 
 .register__form-title span {
-  color: var(--gold);
+  color: var(--night, var(--gold)) var(--day, var(--orange));
 }
 
 .register__form-wrapper {
@@ -48,10 +48,6 @@
   margin-right: 10px;
 }
 
-.register__form-input:focus {
-  outline: 1px solid var(--gold-70);
-}
-
 .register__btn {
   font-weight: 500;
   margin-right: 10px;
@@ -62,7 +58,8 @@
 }
 
 .register__login-link {
-  color: var(--gold);
+  font-weight: 600;
+  color: var(--night, var(--gold)) var(--day, var(--orange));
 }
 
 @media screen and (max-width: 575px) {

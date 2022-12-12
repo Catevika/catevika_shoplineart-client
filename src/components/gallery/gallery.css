@@ -12,10 +12,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px 0 10px 195px;
   width: calc(100% - 157px);
+  height: 45px;
   margin-top: -15px;
-  background-color: var(--dark);
+  background-color: var(--night, var(--dark)) var(--day, var(--gray));
 }
 
 .photo-size-label {
@@ -31,7 +31,7 @@
 }
 
 .photo-size-select:hover {
-  outline: 1px solid var(--gold);
+  outline: 1px solid var(--night, var(--gold)) var(--day, var(--orange));
 }
 
 .photo-size-option {
@@ -40,12 +40,12 @@
 
 .gallery__page {
   position: fixed;
-  background-color: var(--dark);
   display: flex;
   justify-content: center;
   align-items: center;
   width: calc(100% - 157px);
-  padding-top: 40px;
+  padding-top: 35px;
+  background-color: var(--night, var(--dark)) var(--day, var(--gray));
   z-index: 150
 }
 
@@ -54,7 +54,7 @@
 }
 
 .gallery__page-text>span {
-  color: var(--gold);
+  color: var(--night, var(--gold)) var(--day, var(--orange));
 }
 
 .gallery__buttons {
@@ -69,7 +69,7 @@
 }
 
 .gallery__button:hover .gallery__icon polygon {
-  stroke: var(--gold);
+  stroke: var(--night, var(--gold)) var(--day, var(--orange));
 }
 
 .gallery__button:nth-of-type(1) {
@@ -83,13 +83,13 @@
 }
 
 .gallery__button:disabled {
-  border: 1px solid var(--gray);
-  background-color: var(--dark);
+  border: 1px solid var(--night, var(--gray)) var(--day, var(--dark));
+  background-color: var(--night, var(--dark)) var(--day, var(--gray));
   cursor: not-allowed;
 }
 
 .gallery__button:disabled .gallery__icon polygon {
-  stroke: var(--gray);
+  stroke: var(--night, var(--gray)) var(--day, var(--dark));
 }
 
 .gallery__icon polygon {
@@ -122,13 +122,15 @@
   }
 
   .gallery__page {
-    width: auto;
-    margin-top: -5px;
+    width: 100vw;
+    justify-content: flex-end;
+    margin-top: 25px;
     padding-top: 0;
+    background-color: transparent;
   }
 
   .gallery__page-text {
-    margin: 10px 20px;
+    margin: 0 20px 10px 20px;
   }
 
   .gallery__icon {
@@ -145,7 +147,7 @@
     overflow-y: scroll;
     overflow-x: hidden;
     scroll-behavior: smooth;
-    margin-top: 45px;
+    margin-top: 75px;
     gap: 10px;
   }
 
