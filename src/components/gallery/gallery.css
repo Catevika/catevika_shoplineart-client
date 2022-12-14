@@ -112,8 +112,8 @@
 
 @media screen and (max-width: 575px) {
   .gallery__container {
-    height: calc(100vh - 290px);
-    margin-top: 90px;
+    height: calc(100vh - 260px);
+    margin-top: 60px;
     z-index: 200;
   }
 
