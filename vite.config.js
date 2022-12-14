@@ -6,7 +6,7 @@ export default defineConfig({
 	server: {
 		proxy: {
 			'/api': {
-				target: 'http://localhost:8800',
+				target: 'http://shoplineart-api/',
 				changeOrigin: true,
 				secure: false
 			}
