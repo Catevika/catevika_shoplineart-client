@@ -2,7 +2,7 @@
   "name": "catevika_shoplineart",
   "private": false,
   "version": "1.0.0",
-  "type": "commonjs",
+  "type": "module",
   "keywords": [
     "vite",
     "react",
