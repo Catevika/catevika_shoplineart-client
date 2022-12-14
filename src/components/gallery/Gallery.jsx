@@ -26,7 +26,7 @@ export default function Gallery({ term }) {
 				setSearching(false);
 			} catch (err) {
 				setError(true);
-				console.log(error);
+				console.log(error.message);
 			}
 		};
 		if (term) getPhotos();

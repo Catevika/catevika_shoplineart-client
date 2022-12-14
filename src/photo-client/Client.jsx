@@ -1,7 +1,15 @@
-import { createClient } from 'pexels';
-
 const pexelAuthorization = import.meta.env.VITE_PEXELS_API_KEY;
-const client = createClient(pexelAuthorization);
 
-export const searchPhotos = async ({ query, page, per_page }) =>
-	client.photos.search({ query, page, per_page });
+export const searchPhotos = async ({ query, page, per_page }) => {
+	const data = await fetch(`https://api.pexels.com/v1//search?query=${query}&page=${page}&per_page=${per_page}`,
+		{
+			method: "GET",
+			headers: {
+				Accept: "application/json",
+				Authorization: pexelAuthorization
+			}
+		});
+	return data.json();
+}
+
+

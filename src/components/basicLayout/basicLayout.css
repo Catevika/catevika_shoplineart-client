@@ -47,6 +47,7 @@
   .welcome__container {
     width: auto;
     margin: 0;
+    padding: 0;
   }
 
   .welcome__container p {
