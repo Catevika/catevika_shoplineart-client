@@ -6,7 +6,7 @@ export default defineConfig({
 	server: {
 		proxy: {
 			'/api': {
-				target: 'http://shoplineart-api/',
+				target: 'https://shoplineart-api.onrender.com',
 				changeOrigin: true,
 				secure: false
 			}
