@@ -136,7 +136,7 @@ input,
 select,
 textarea {
   color: var(--night, var(--gray)) var(--day, var(--dark));
-  background-color: var(--dark-10);
+  background-color: var(--night, var(--dark)) var(--day, var(--gray));
 }
 
 input:hover,
