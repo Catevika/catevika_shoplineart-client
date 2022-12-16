@@ -5,12 +5,17 @@
 }
 
 .welcome__container {
+  position: fixed;
+  z-index: 30;
+  top: 0;
+  left: 157px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  width: calc(100vw - 157px);
+  margin: 0 auto;
   height: 100vh;
-  padding-left: 157px;
 }
 
 .welcome__container p {
@@ -48,10 +53,14 @@
 
 @media screen and (max-width: 575px) {
   .welcome__container {
+    z-index: 30;
     height: calc(100vh - 125px);
-    width: auto;
-    margin: 0;
+    width: 100%;
+    margin: 0 auto;
     padding: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
   }
 
   .welcome__container p {

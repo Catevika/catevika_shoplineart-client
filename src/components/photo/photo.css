@@ -2,14 +2,14 @@
   position: relative;
 }
 
-.photo__img-wrapper:hover {
-  cursor: help;
-}
-
 .photo__img {
   width: calc(100% - 1rem);
   padding: 10px;
   border: 1px solid var(--night, var(--gray)) var(--day, var(--dark));
+}
+
+.photo__img:hover {
+  cursor: pointer;
 }
 
 .photo__overlay {
@@ -22,6 +22,7 @@
   width: calc(100% - 1rem);
   height: calc(100% - 0.5rem);
   opacity: 0.75;
+  cursor: auto;
 }
 
 .photo__text-wrapper {
@@ -53,10 +54,6 @@
   font-weight: 400;
   opacity: 1;
 }
-
-/* .photo__link:hover {
-  color: var(--night, var(--gold)) var(--day, var(--orange));
-} */
 
 .cart__icon {
   position: absolute;

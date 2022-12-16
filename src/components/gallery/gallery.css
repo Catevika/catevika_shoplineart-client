@@ -9,7 +9,7 @@
 .gallery__size-selector {
   position: fixed;
   top: 85px;
-  z-index: 5;
+  z-index: 30;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -112,7 +112,7 @@
 
 @media screen and (max-width: 575px) {
   .gallery__container {
-    height: calc(100vh - 275px);
+    height: calc(100vh - 290px);
     margin-top: 80px;
   }
 
