@@ -45,6 +45,7 @@
 
 @media screen and (max-width: 575px) {
   .welcome__container {
+    height: calc(100vh - 125px);
     width: auto;
     margin: 0;
     padding: 0;

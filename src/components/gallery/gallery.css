@@ -46,7 +46,7 @@
   width: calc(100% - 157px);
   padding-top: 35px;
   background-color: var(--night, var(--dark)) var(--day, var(--gray));
-  z-index: 150
+  z-index: 200
 }
 
 .gallery__page-text {
@@ -112,8 +112,8 @@
 
 @media screen and (max-width: 575px) {
   .gallery__container {
-    height: calc(100vh - 260px);
-    margin-top: 60px;
+    height: calc(100vh - 275px);
+    margin-top: 80px;
     z-index: 200;
   }
 
@@ -124,9 +124,9 @@
   .gallery__page {
     width: 100vw;
     justify-content: flex-end;
-    margin-top: 25px;
+    top: 120px;
     padding-top: 0;
-    background-color: transparent;
+    background-color: var(--night, var(--dark)) var(--day, var(--gray));
   }
 
   .gallery__page-text {
@@ -149,6 +149,7 @@
     scroll-behavior: smooth;
     margin-top: 75px;
     gap: 10px;
+    z-index: 200;
   }
 
   .gallery__photo {
