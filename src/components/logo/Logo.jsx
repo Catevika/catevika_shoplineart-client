@@ -22,7 +22,6 @@ export default function Logo() {
 
 	return (
 		<div className='logo__container'>
-
 			<figure className='logo'>
 				<img src={logoUrl} alt='logo' className='logo-img' />
 				<figcaption className='logo-caption'>ShopLineArt</figcaption>

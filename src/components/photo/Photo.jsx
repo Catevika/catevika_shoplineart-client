@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { CartContext } from '../../context/cartContext/cartContext';
 import { FaCartArrowDown } from 'react-icons/fa';
 import './photo.css';
@@ -7,6 +7,13 @@ export default function Photo({ photo, size }) {
 	const { cart, dispatch } = useContext(CartContext);
 
 	const overlayColor = photo.avg_color ? photo.avg_color : '#242424b3';
+
+	const [isClicked, setIsClicked] = useState(null);
+
+
+	const toggleOverlay = () => {
+		setIsClicked(!isClicked);
+	};
 
 	const addToCart = () => {
 		dispatch({
@@ -26,7 +33,7 @@ export default function Photo({ photo, size }) {
 
 	return (
 		<div className='photo__img-container'>
-			<div className='photo__img-wrapper'>
+			<div className='photo__img-wrapper' onClick={toggleOverlay}>
 				<img
 					src={size === 'medium'
 						? photo.src.medium
@@ -39,7 +46,7 @@ export default function Photo({ photo, size }) {
 					loading='auto'
 					className='photo__img'
 				/>
-				<div className='photo__overlay' style={{ 'background': overlayColor }}>
+				{isClicked ? <div className='photo__overlay' style={{ 'background': overlayColor }}>
 					<div className='photo__text'>
 						<div className='photo__text-wrapper'>
 							<a href={photo.photographer_url} className='photo__link'>
@@ -55,7 +62,7 @@ export default function Photo({ photo, size }) {
 							</p>
 						</div>
 					</div>
-				</div>
+				</div> : null}
 			</div>
 			<FaCartArrowDown
 				title='Cart'

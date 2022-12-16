@@ -4,9 +4,14 @@
   left: 1rem;
   bottom: 1rem;
   width: 125px;
+  height: calc(100vh - 2rem);
   border: 1px solid var(--night, var(--gold-70)) var(--day, var(--orange-70));
   border-radius: 10px;
-  z-index: 0;
+  z-index: 30;
+}
+
+.nav__container {
+  margin-top: 210px;
 }
 
 .nav__items-list {
@@ -15,10 +20,10 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: flex-start;
-  height: calc(100vh - 285px);
+  height: calc(100vh - 305px);
   background-color: var(--night, var(--dark)) var(--day, var(--gray));
   border-radius: 10px;
-  z-index: 250;
+  z-index: 35;
 }
 
 .nav__link {
@@ -76,8 +81,8 @@
 @media screen and (max-width: 575px) {
   .sidebar__container {
     bottom: 0;
+    width: 0;
     border: none;
-    /* background-color: transparent; */
   }
 
   .nav__container {

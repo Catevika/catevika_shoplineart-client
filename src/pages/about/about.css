@@ -23,7 +23,6 @@
 }
 
 .about__wrapper {
-  z-index: 10;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -87,7 +86,7 @@
 
   .about__wrapper {
     justify-content: flex-start;
-    height: calc(100vh - 290px);
+    height: calc(100vh - 285px);
     overflow-y: scroll;
   }
 

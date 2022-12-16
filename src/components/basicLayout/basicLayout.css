@@ -1,3 +1,9 @@
+.main__container {
+  color: var(--night, var(--gray)) var(--day, var(--dark));
+  background-color: var(--night, var(--dark)) var(--day, var(--gray));
+  min-height: 100vh;
+}
+
 .welcome__container {
   display: flex;
   flex-direction: column;
@@ -5,8 +11,6 @@
   align-items: center;
   height: 100vh;
   padding-left: 157px;
-  color: var(--night, var(--gray)) var(--day, var(--dark));
-  background-color: var(--night, var(--dark)) var(--day, var(--gray));
 }
 
 .welcome__container p {
@@ -40,7 +44,6 @@
 
 .welcome__btn {
   margin-top: 20px;
-  z-index: 250;
 }
 
 @media screen and (max-width: 575px) {

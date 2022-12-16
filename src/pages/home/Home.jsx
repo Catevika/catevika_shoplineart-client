@@ -23,7 +23,7 @@ export default function Home() {
 						title='Pexels link'
 						className='header__text-link'
 					>
-						PEXELS{' '}
+						PEXELS&nbsp;{' '}
 					</a>
 					amazing&nbsp;artists!
 				</p>
@@ -34,7 +34,6 @@ export default function Home() {
 						title='Search input'
 						name='search'
 						placeholder='Search... '
-						autoFocus
 						value={text}
 						onChange={(e) => setText(e.target.value)}
 						className='search__input'

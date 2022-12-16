@@ -11,6 +11,7 @@ export default function Gallery({ term }) {
 	const [pageNumber, setPageNumber] = useState(1);
 	const [gallery, setGallery] = useState([]);
 
+
 	useEffect(() => {
 		const getPhotos = async () => {
 			try {

@@ -30,7 +30,7 @@ export default function About() {
 					<ul>
 						<li className='about__item'>
 							<FaMobileAlt className='about__icon' />
-							<p className='about__item-text'>Fully <strong>responsive</strong> format starting from <strong>280px</strong> wide</p>
+							<p className='about__item-text'>Fully <strong>responsive</strong> format starting from <strong>320px</strong> wide</p>
 						</li>
 						<li className='about__item'>
 							<AiFillDatabase className='about__icon' />

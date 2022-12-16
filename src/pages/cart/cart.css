@@ -77,7 +77,7 @@
 
 .cart__item-icon {
   position: absolute;
-  z-index: 50;
+  z-index: 3;
   top: 15px;
   right: 15px;
   width: 32px;
@@ -125,7 +125,9 @@
   .cart__container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: -50px;
     margin-left: 1rem;
     padding-left: 0;
     overflow-y: unset;
@@ -136,17 +138,17 @@
   }
 
   .cart__wrapper {
-    margin-top: -100px
+    width: 100%;
   }
 
   .cart__items-list {
-    z-index: 10;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    width: calc(100vw - 1rem);
-    height: calc(100vh - 310px);
+    width: 100%;
+    margin-left: 5px;
+    height: calc(100vh - 275px);
     overflow-y: scroll;
   }
 

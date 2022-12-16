@@ -2,6 +2,10 @@
   position: relative;
 }
 
+.photo__img-wrapper:hover {
+  cursor: help;
+}
+
 .photo__img {
   width: calc(100% - 1rem);
   padding: 10px;
@@ -17,11 +21,6 @@
   right: 0;
   width: calc(100% - 1rem);
   height: calc(100% - 0.5rem);
-  opacity: 0;
-  transition: .5s ease;
-}
-
-.photo__img-wrapper:hover .photo__overlay {
   opacity: 0.75;
 }
 
@@ -44,7 +43,7 @@
 }
 
 .photo__link {
-  color: var(--white);
+  color: var(--night, var(--gold)) var(--day, var(--orange));
   opacity: 1;
 }
 
@@ -55,13 +54,13 @@
   opacity: 1;
 }
 
-.photo__link:hover {
+/* .photo__link:hover {
   color: var(--night, var(--gold)) var(--day, var(--orange));
-}
+} */
 
 .cart__icon {
   position: absolute;
-  z-index: 50;
+  z-index: 25;
   bottom: 0;
   right: 0;
   width: 2.5rem;
@@ -78,7 +77,7 @@
 
 .cart__icon-disabled {
   position: absolute;
-  z-index: 50;
+  z-index: 25;
   bottom: 0;
   right: 0;
   width: 2.5rem;

@@ -1,4 +1,5 @@
 import { Link, Outlet, useLocation } from 'react-router-dom';
+import Logo from '../logo/Logo';
 import SideBar from '../sideBar/SideBar';
 import Footer from '../footer/Footer';
 import './basicLayout.css';
@@ -8,9 +9,10 @@ export default function BasicLayout() {
 
 	return (
 		<>
+			<Logo />
 			<SideBar />
 			<main>
-				<Outlet />
+				<div className='main__container'><Outlet /></div>
 				{location?.pathname === '/' ? <div className='welcome__container'>
 					<p title='Welcome'>
 						Welcome to

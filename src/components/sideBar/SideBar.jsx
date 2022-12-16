@@ -1,7 +1,6 @@
 import { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
 import { CartContext } from '../../context/cartContext/cartContext';
-import Logo from '../logo/Logo';
 import { FaCartArrowDown } from 'react-icons/fa';
 import { FcAbout } from 'react-icons/fc';
 import { MdContacts } from 'react-icons/md';
@@ -15,7 +14,6 @@ export default function SideBar() {
 		<aside
 			className='sidebar__container'
 		>
-			<Logo />
 			<nav className='nav__container'>
 				<ul className='nav__items-list'>
 					<li className='nav__item'>
