@@ -1,4 +1,5 @@
 import { useContext } from 'react';
+import { Link } from 'react-router-dom';
 import JSZip from "jszip";
 import saveAs from 'file-saver';
 import { AuthContext } from '../../context/authContext/authContext';
@@ -45,6 +46,11 @@ export default function Cart() {
 							? "Let's check your cart:"
 							: "Let's put some photos in your cart!"}
 					</p>
+					{cart.length === 0 ? <Link to='/home'>
+						<button title='Home' className='welcome__btn'>
+							Go to home
+						</button>
+					</Link> : null}
 				</div>
 				{cart.length > 0 ? <button type='button' onClick={handleDownload} className='cart__zip-btn' >Download ZIP</button> : null}
 				{cart.length > 0 ? <div className='cart__items-list'>
