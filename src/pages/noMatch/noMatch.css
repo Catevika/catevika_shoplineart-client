@@ -49,7 +49,6 @@
   margin-inline: 155px;
   width: calc(100vw - 310px);
   height: 60%;
-  margin-top: -130px;
   -webkit-mask-image: linear-gradient(rgba(0, 0, 0, 1) 20%, transparent);
   mask-image: linear-gradient(rgba(0, 0, 0, 1) 20%, transparent);
 }
@@ -57,6 +56,15 @@
 @media screen and (max-width: 575px) {
   .nomatch__container {
     width: 100vw;
+  }
+
+  .nomatch__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 110px;
+    margin-inline: 1rem;
+    width: calc(100vw - 2rem);
   }
 
   .nomatch__text {
