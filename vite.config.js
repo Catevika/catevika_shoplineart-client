@@ -10,7 +10,13 @@ export default defineConfig({
 				changeOrigin: true,
 				secure: false
 			}
-		}
+		},
+		rewrites: [
+			{
+				source: '(.*)',
+				destination: '/index.html'
+			}
+		]
 	},
 	plugins: [react()]
 });
