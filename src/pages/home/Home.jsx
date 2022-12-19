@@ -17,7 +17,7 @@ export default function Home() {
 		<section className='home__container'>
 			<header className='header__container'>
 				<p title='Find text'>
-					Find the perfect photo from{' '}
+					Find the perfect photos from{' '}
 					<a
 						href='https://www.pexels.com'
 						title='Pexels link'
@@ -44,7 +44,11 @@ export default function Home() {
 				</form>
 			</header>
 
-			<Gallery term={term} />
+			{term ? <Gallery term={term} /> : <div className='search__message'>
+				<h2>Let's start browsing!</h2>
+				<p><strong>Search</strong> by generic terms as <span>'nature'</span>, <span>'snow'</span>, etc. or more specific ones as <span>'new-york yellow cab'</span>...</p>
+				<p><strong>Click</strong> on each photo to get information about its <span>author</span> and <span>size</span>.</p>
+			</div>}
 		</section>
 	);
 }
