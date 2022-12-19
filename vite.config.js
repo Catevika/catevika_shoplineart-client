@@ -8,7 +8,9 @@ export default defineConfig({
 			'/api': {
 				target: 'https://shoplineart-api.onrender.com',
 				changeOrigin: true,
-				secure: false
+				secure: false,
+				ws: true,
+				rewrite: (path) => path.replace(/^\/api/, '')
 			}
 		}
 	},
