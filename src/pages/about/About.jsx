@@ -34,7 +34,7 @@ export default function About() {
 						</li>
 						<li className='about__item'>
 							<AiFillDatabase className='about__icon' />
-							<p className='about__item-text'><strong>Tests database</strong> Fake credentials allowed</p>
+							<p className='about__item-text'><strong>Tests database</strong> with fake credentials allowed</p>
 						</li>
 						<li className='about__item'>
 							<BiSearchAlt className='about__icon' />
