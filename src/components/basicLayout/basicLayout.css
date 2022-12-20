@@ -54,7 +54,7 @@
 @media screen and (max-width: 575px) {
   .welcome__container {
     z-index: 30;
-    height: calc(100vh - 125px);
+    height: calc(100vh - 190px);
     width: 100%;
     margin: 0 auto;
     padding: 0;
