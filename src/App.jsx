@@ -42,7 +42,7 @@ function App() {
 							<circle className="cls-1" cx="236.2" cy="236.2" r="103.78" />
 						</g>
 					</svg>
-				</button> {/* : null} */}
+				</button>
 				<Routes>
 					<Route path='/' element={<BasicLayout />} end>
 						<Route
