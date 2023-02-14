@@ -23,10 +23,14 @@ See [https://github.com/Catevika/catevika_shoplineart-server](https://github.com
 
 ## To clone the ShopLineArt app SERVER and CLIENT repositories
 
-```cli
+```
 mkdir shoplineart-clone
 cd shoplineart-clone
+```
 
+then
+
+```
 mkdir server
 cd server
 git clone https://github.com/Catevika/catevika_shoplineart-server.git
@@ -44,7 +48,7 @@ Set JWT_KEY with your random secret phrase used during the token generation
 
 then
 
-```cli
+```
 cd ..
 mkdir client
 cd client
@@ -77,7 +81,7 @@ Set:
 
 then
 
-```cli
+```
 cd ../server
 npm run dev
 ```

@@ -33,7 +33,7 @@ export default function Photo({ photo, size }) {
 
 	return (
 		<div className='photo__img-container'>
-			<div className='photo__img-wrapper' onClick={toggleOverlay}>
+			<div className='photo__img-wrapper' title='Click for information' onClick={toggleOverlay}>
 				<img
 					src={size === 'medium'
 						? photo.src.medium
