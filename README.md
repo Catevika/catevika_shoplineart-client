@@ -1,5 +1,19 @@
 # ShopLineArt CLIENT
 
+Photo Gallery App with 3 main features:
+
+- photo search by term
+- display of the photos in different sizes
+- protected multiple photos download, zip folder format with credits availability
+
+## Table of Content <!-- omit in toc -->
+
+- [ShopLineArt CLIENT](#shoplineart-client)
+  - [General Information](#general-information)
+  - [NPM packages](#npm-packages)
+  - [ShopLineArt SERVER](#shoplineart-server)
+  - [To clone the ShopLineArt app SERVER and CLIENT repositories](#to-clone-the-shoplineart-app-server-and-client-repositories)
+
 ## General Information
 
 - App: **Vite V4 + React plugin**
