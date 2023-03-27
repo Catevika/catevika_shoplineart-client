@@ -1,5 +1,7 @@
 # ShopLineArt CLIENT
 
+![ShopLineArt](./src/assets/ShopLineArt.png)
+
 Photo Gallery App with 3 main features:
 
 - photo search by term
