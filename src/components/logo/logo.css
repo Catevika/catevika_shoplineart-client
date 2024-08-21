@@ -1,0 +1,81 @@
+.logo__container {
+  position: fixed;
+  z-index: 50;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.logo {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.logo-img {
+  width: 123px;
+  height: 123px;
+  margin: 1rem;
+}
+
+#day .logo-img {
+  -webkit-filter: hue-rotate(320deg);
+  filter: hue-rotate(320deg);
+}
+
+#night .logo-img {
+  -webkit-filter: hue-rotate(330deg);
+  filter: hue-rotate(330deg);
+}
+
+
+.logo-caption {
+  font-family: 'Stint Ultra Condensed', cursive;
+  font-size: 2rem;
+  color: var(--night, var(--gray)) var(--day, var(--dark));
+  margin-top: -5px;
+}
+
+.logo__btn-logout {
+  position: relative;
+  margin-top: 10px;
+  margin-left: 45px;
+  color: var(--night, var(--gold)) var(--day, var(--orange));
+  background-color: var(--night, var(--dark)) var(--day, var(--gray));
+  border: 1px solid var(--night, var(--gold)) var(--day, var(--orange));
+  z-index: 65;
+}
+
+@media screen and (max-width: 575px) {
+  .logo__container {
+    flex-direction: row;
+    justify-content: flex-start;
+    width: calc(100vw - 2rem);
+    height: 90px;
+  }
+
+  .logo {
+    flex-direction: row;
+  }
+
+  .logo-img {
+    margin: 0;
+    width: 84px;
+    height: 84px;
+  }
+
+  .logo-caption {
+    margin-left: -15px;
+  }
+
+  .logo__btn-logout {
+    margin-top: 27px;
+    margin-left: 20px;
+  }
+}
