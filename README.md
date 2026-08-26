@@ -15,6 +15,7 @@ Photo Gallery App with 3 main features:
   - [NPM packages](#npm-packages)
   - [ShopLineArt SERVER](#shoplineart-server)
   - [To clone the ShopLineArt app SERVER and CLIENT repositories](#to-clone-the-shoplineart-app-server-and-client-repositories)
+  - [Deploy the client to Render](#deploy-the-client-to-render)
 
 ## General Information
 
@@ -39,14 +40,14 @@ See [https://github.com/Catevika/catevika_shoplineart-server](https://github.com
 
 ## To clone the ShopLineArt app SERVER and CLIENT repositories
 
-```
+```bash
 mkdir shoplineart-clone
 cd shoplineart-clone
 ```
 
 then
 
-```
+```bash
 mkdir server
 cd server
 git clone https://github.com/Catevika/catevika_shoplineart-server.git
@@ -64,7 +65,7 @@ Set JWT_KEY with your random secret phrase used during the token generation
 
 then
 
-```
+```bash
 cd ..
 mkdir client
 cd client
@@ -99,7 +100,7 @@ Set:
 
 then
 
-```
+```bash
 cd ../server
 npm run dev
 ```
