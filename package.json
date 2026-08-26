@@ -24,6 +24,7 @@
 		"@emotion/react": "^11.14.0",
 		"@emotion/styled": "^11.14.1",
 		"@mui/material": "^7.3.5",
+		"@rolldown/binding-wasm32-wasi": "^1.2.6",
 		"axios": "^1.20.0",
 		"file-saver": "^2.0.5",
 		"jszip": "^3.10.1",
