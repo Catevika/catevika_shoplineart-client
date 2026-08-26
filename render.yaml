@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: shoplineart-client
+    runtime: static
+    buildCommand: npm ci && npm run build
+    staticPublishPath: ./dist
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
+    envVars:
+      - key: VITE_BASE_URL
+        sync: false
+      - key: VITE_PEXELS_API_KEY
+        sync: false
+      - key: VITE_EMAILJS_PUBLIC_KEY
+        sync: false
+      - key: VITE_EMAILJS_SERVICE_ID
+        sync: false
+      - key: VITE_EMAILJS_TEMPLATE_ID
+        sync: false

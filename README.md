@@ -18,8 +18,8 @@ Photo Gallery App with 3 main features:
 
 ## General Information
 
-- App: **Vite V4 + React plugin**
-- Router: **React-router-dom V6**
+- App: **Vite + React plugin**
+- Router: **React-router-dom**
 - API: **Pexels**
 
 ## NPM packages
@@ -78,10 +78,12 @@ touch .env
 
 Create a **PEXELS** developer account to set the **VITE_PEXELS_API_KEY**
 
-To set **VITE_BASE_URL**:
+Set these variables in the client environment. Copy `.env.example` to `.env` for local development.
 
-- development: your Vite localhost
-- production: your client site url
+Set **VITE_BASE_URL** to the URL of the deployed API service, without a trailing slash:
+
+- development: your local API URL, for example `http://localhost:8800`
+- production: your API Render service URL, for example `https://shoplineart-api.onrender.com`
 
 ---
 
@@ -103,3 +105,7 @@ npm run dev
 ```
 
 See the respective **package.json** files to launch the client and the server separately
+
+## Deploy the client to Render
+
+This repository includes `render.yaml` for a Render Static Site. Create a Render Blueprint from the repository, then set the `VITE_*` environment variables when prompted. Render runs `npm ci && npm run build`, publishes `dist`, and rewrites client-side routes to `index.html` so direct links such as `/home` work after deployment.

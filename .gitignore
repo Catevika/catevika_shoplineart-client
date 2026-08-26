@@ -28,3 +28,4 @@ dist-ssr
 
 # ENV variables
 .env
+.env.example
